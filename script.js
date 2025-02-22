@@ -1,0 +1,116 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Example animation for the home section
+    const homeSection = document.getElementById('home');
+    homeSection.style.opacity = 0;
+    setTimeout(() => {
+        homeSection.style.transition = 'opacity 2s';
+        homeSection.style.opacity = 1;
+    }, 500);
+
+    // Toggle navigation menu
+    const navToggle = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.navbar');
+
+    function toggleMenu() {
+        navMenu.classList.toggle('active');
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+
+    // Smooth scroll for navbar links
+    document.querySelectorAll('.nav-menu a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            navMenu.classList.remove('active'); // Close the menu after clicking a link
+        });
+    });
+
+    // Responsive behavior for the navbar
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handleMediaQueryChange = () => {
+        if (mediaQuery.matches) {
+            navMenu.classList.remove('active');
+        }
+    };
+    mediaQuery.addListener(handleMediaQueryChange);
+    handleMediaQueryChange();
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+
+    // Replace the theme toggle section with this:
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {  // Add null check
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            document.querySelectorAll('.project-box').forEach(box => {
+                box.classList.toggle('dark-theme');
+            });
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.toggle('dark-theme');
+            });
+            document.querySelectorAll('.contact-icon').forEach(icon => {
+                icon.classList.toggle('dark-theme');
+            });
+            themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+        });
+    }
+
+    // Add this just before creating the chart
+    console.log('Initializing chart...');
+    console.log('Canvas element:', document.getElementById('skillsChart'));
+
+    // Create a pie chart for skills using Chart.js
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    const skillsChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
+            datasets: [{
+                label: 'Skill Levels',
+                data: [40, 20, 20, 30, 15, 20, 20], // Adjust these values as needed
+                backgroundColor: [
+                    '#3DDC84',
+                    '#9966FF',
+                    '#FF9F40',
+                    '#FFCE56',
+                    '#4BC0C0',
+                    '#110000',
+                    '#FF6384'
+                ],
+                borderColor: '#fff',
+                borderWidth: 1,
+                font: {
+                    color: '#111111'
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Skills Pie Chart'
+                }
+            }
+        }
+    });
+});

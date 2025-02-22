@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Agarwal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+  <nav class="navbar" >
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- <li><button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button></li> -->
+    </ul>
+  </nav>
+</header>
+
+  <section id="home" class="animate-on-scroll">
+    <h1>Welcome to My Portfolio</h1>
+    <h2>Hi, I'm Jay Agarwal</h2>
+    <p>Android Developer</p>
+  </section>
+
+  <section id="projects" class="animate-on-scroll">
+    <h1>My Projects</h1>
+    <div class="project-grid">
+      <div class="project-box">
+        <a href="https://github.com/jayagarwal-github/Nexa-Connect" target="_blank">
+          <div class="project-content">
+            <img src="./assets/nexalogo1.png" alt="Nexa Connect">
+            <div class="project-details">
+              <p class="project-description">It is the chating app</p>
+            </div>
+          </div>
+        </a>
+        <h3>Nexa Connect</h3>
+      </div>
+
+      <div class="project-box">
+        <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank">
+          <div class="project-content">
+            <img src="./assets/Notes.png" alt="Notes App">
+            <div class="project-details">
+              <p class="project-description">Mobile app with Firebase integration for real-time data synchronization.
+                Features include user authentication and cloud storage.</p>
+            </div>
+          </div>
+        </a>
+        <h3>Notes App</h3>
+      </div>
+
+      <div class="project-box">
+        <a href="https://github.com/jayagarwal-github/Daily-News-App" target="_blank">
+          <div class="project-content">
+            <img src="./assets/dailynews.png" alt="News App">
+            <div class="project-details">
+              <p class="project-description">An innovative Android application utilizing REST APIs and implementing
+                offline-first architecture with Room database.</p>
+            </div>
+          </div>
+        </a>
+        <h3>News App</h3>
+      </div>
+
+      <div class="project-box">
+        <a href="https://github.com/jayagarwal-github/Meme-App" target="_blank">
+          <div class="project-content">
+            <img src="./assets/meme logo.png" alt="Meme App">
+            <div class="project-details">
+              <p class="project-description">An innovative Android application utilizing REST APIs and implementing
+                offline-first architecture with Room database.</p>
+            </div>
+          </div>
+        </a>
+        <h3>Meme App</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="animate-on-scroll">
+    <h1>My Skills</h1>
+    <canvas id="skillsChart" width="100" height="100"></canvas>
+    </section>  
+
+  <section id="about" class="animate-on-scroll">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="./assets/Android Logo.png" alt="Jay Agarwal" class="profile-pic">
+      <div class="about-text">
+        <p>Hello! I'm Jay Agarwal, a passionate Android developer currently pursuing my BCA in my 3rd year. I thrive on
+          creating innovative mobile applications that offer seamless user experiences.</p>
+        <p>With a strong foundation in Java and Kotlin, I've developed several projects that showcase my skills in
+          mobile app development. I enjoy tackling complex problems and turning ideas into reality through code.</p>
+        <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
+          sharing knowledge with the developer community. Let's connect and create something amazing together!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="animate-on-scroll">
+    <h2>Get in Touch</h2>
+    <div class="contact-icons">
+      <a href="tel:+919548897173" class="contact-icon">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:jayagarwal634@gmail.com" target="_blank" class="contact-icon">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/919548897173" target="_blank" class="contact-icon">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jayagarwal634/" target="_blank" class="contact-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/jayagarwal-github" target="_blank" class="contact-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/jayagarwal634" target="_blank" class="contact-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
