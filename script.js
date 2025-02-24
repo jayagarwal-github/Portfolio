@@ -7,31 +7,41 @@ document.addEventListener('DOMContentLoaded', function() {
         homeSection.style.opacity = 1;
     }, 500);
 
-    // Toggle navigation menu
-    const navToggle = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.navbar');
+    // Remove the old navigation code and replace with this unified version
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
 
+    // Toggle menu function
     function toggleMenu() {
+        hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     }
 
-    navToggle.addEventListener('click', toggleMenu);
+    // Event listeners
+    hamburger.addEventListener('click', toggleMenu);
 
-    // Smooth scroll for navbar links
-    document.querySelectorAll('.nav-menu a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    // Smooth scroll and menu close for nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
+            
+            // Close menu
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            
+            // Smooth scroll
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
-            navMenu.classList.remove('active'); // Close the menu after clicking a link
         });
     });
 
-    // Responsive behavior for the navbar
+    // Handle responsive behavior
     const mediaQuery = window.matchMedia('(max-width: 768px)');
     const handleMediaQueryChange = () => {
-        if (mediaQuery.matches) {
+        if (!mediaQuery.matches) {
+            hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }
     };
@@ -113,4 +123,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+    
+    // Form submission handling
+    const form = document.getElementById('queryForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Form will be handled by Formspree automatically
+            // You can add loading states or success messages here
+            setTimeout(() => {
+                alert('Thank you for your message!');
+                form.reset();
+            }, 1000);
+        });
+    }
 });
