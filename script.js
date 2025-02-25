@@ -136,4 +136,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
+
+    // Add the new smooth scroll for .nav-link elements
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default anchor behavior
+
+            const targetId = this.getAttribute('href').substring(1); // Get the target ID without the #
+            const targetElement = document.getElementById(targetId);
+
+            // Scroll to the target element smoothly
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
