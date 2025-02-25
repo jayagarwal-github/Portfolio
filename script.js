@@ -93,15 +93,15 @@ document.addEventListener('DOMContentLoaded', function() {
             labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
             datasets: [{
                 label: 'Skill Levels',
-                data: [90, 40, 40, 35, 30, 35, 25], // Adjust these values as needed
+                data: [90, 40, 40, 35, 30, 35, 25],
                 backgroundColor: [
-                '#f9c74f',  // Yellow
+                '#f9c74f', 
                 '#f9f871',
-                '#90be6d',  // Green
+                '#90be6d',
                 '#43aa8b',
-                '#4d908e',  // Blue-Green
+                '#4d908e',  
                 '#277da1',
-                '#577590'   // Dark Blue
+                '#577590'  
 ],
                 borderColor: '#fff',
                 borderColor: '#fff',
