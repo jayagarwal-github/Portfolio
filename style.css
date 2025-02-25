@@ -7,6 +7,7 @@ body {
     box-sizing: border-box;
     background-color: #000000;
     color:  #1ABC9C;
+    
 }
 
 body.dark-theme {
@@ -16,6 +17,7 @@ body.dark-theme {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
+    font-family: 'ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
 }
 
 h2 {
@@ -24,6 +26,8 @@ h2 {
 
 p, a, span, li, input, button {
     font-weight: 400;
+    font-family: 'ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+
 }
 
 header {
@@ -362,8 +366,8 @@ nav ul li a {
 }
 
 #home h1 {
-    font-family: 'playfair display', sans-serif;
-    font-size: 3.5em;
+    font-family: 'ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+    font-size: 3.8em;
     margin-bottom: 30px;
     color: #1ABC9C;
     text-shadow: 2px 2px 4px rgba(26, 188, 156, 0.3);
@@ -371,7 +375,7 @@ nav ul li a {
 }
 
 #home h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
     font-size: 2.5em;
     margin: 20px 0;
     color: #fff;
@@ -380,12 +384,12 @@ nav ul li a {
 }
 
 #home p {
-    font-family: 'Lato', sans-serif;
-    font-size: 2em;
+    font-family: 'ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji';
+    font-size: 1.2em;
     color: #1ABC9C;
     margin-top: 20px;
     font-weight: 400;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -400,15 +404,15 @@ nav ul li a {
         display:inline-block;
         margin-top: 180px;
         text-align: center;
-        height: auto;
+        height: 50vh;
     }
 
     #home h1 {
-        font-size: 60px;
+        font-size: 4em
     }
     
     #home h2 {
-        font-size: 30px;
+        font-size: 2em;
     }
 
     #home p {
@@ -435,11 +439,14 @@ nav ul li a {
 }
 
 @media (max-width: 480px) {
+    #home, #about, #projects, #contact {
+        padding: 30px;
+    }
     
     #home{
         display:inline-block;
         margin-top: 250px;
-        min-height: 100vh;
+        min-height: 70vh;
         align-items: center;
         justify-content: center;
         animation: ease-in-out 5s;
@@ -826,10 +833,11 @@ nav ul li a {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover;
+    zoom: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
 }
@@ -904,10 +912,8 @@ nav ul li a {
 .contact-icons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
     margin: 10px 0;
-    gap: 20px;
+    gap: 50px;
     padding: 20px;
 }
 
@@ -919,7 +925,7 @@ nav ul li a {
     color: #333;
     transition: transform 0.3s ease, color 0.3s ease;
     border: none;
-    font-size: 1.5em;
+    font-size: 1em;
     transition: color 0.3s;
 }
 
@@ -1039,13 +1045,26 @@ nav ul li a {
     transform: translateY(-2px);
     opacity: 0.9;
 }
-.hamburger {
-    display: none;  /* Hidden by default on large screens */
-}
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .contact-icons {
-        gap: 30px;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+        gap: 35px;
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.3s ease, color 0.3s ease;
+        border: none;
+        font-size: 1.8em;
+        transition: color 0.3s;
     }
 
     .contact-icon i {

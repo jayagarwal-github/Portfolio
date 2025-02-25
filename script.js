@@ -93,16 +93,21 @@ document.addEventListener('DOMContentLoaded', function() {
             labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
             datasets: [{
                 label: 'Skill Levels',
-                data: [40, 20, 20, 30, 15, 20, 20], // Adjust these values as needed
+                data: [90, 40, 40, 35, 30, 35, 25], // Adjust these values as needed
                 backgroundColor: [
-                    '#3DDC84',
-                    '#9966FF',
-                    '#FF9F40',
-                    '#FFCE56',
-                    '#4BC0C0',
-                    '#110000',
-                    '#FF6384'
-                ],
+                '#f9c74f',  // Yellow
+                '#f9f871',
+                '#90be6d',  // Green
+                '#43aa8b',
+                '#4d908e',  // Blue-Green
+                '#277da1',
+                '#577590'   // Dark Blue
+],
+                borderColor: '#fff',
+                borderColor: '#fff',
+                borderColor: '#131313',
+                borderColor: '#fff',
+                borderColor: '#fff',
                 borderColor: '#fff',
                 borderWidth: 1,
                 font: {
@@ -152,3 +157,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+//Color Code for pir chart
+
+// backgroundColor: [
+//     '#a8dadc',  // Light Blue
+//     '#457b9d',  // Dark Blue
+//     '#e63946',  // Red
+//     '#f1faee',  // Off-White
+//     '#6c5b7b',  // Purple
+//     '#355c7d',  // Dark Blue
+//     '#c06c84'   // Pink
+// ],
+// borderColor: '#fff',
+
+// backgroundColor: [
+//     '#3DDC84',  // Android Green
+//     '#7F52FF',  // Kotlin Purple
+//     '#f89820',  // Java Orange
+//     '#FFCA28',  // Firebase Yellow
+//     '#F05032',  // Git Red
+//     '#4285F4',  // Google Blue
+//     '#00BCD4'   // Cyan
+// ],
+// borderColor: '#131313',
+
+// backgroundColor: [
+//     '#f9c74f',  // Yellow
+//     '#f9f871',
+//     '#90be6d',  // Green
+//     '#43aa8b',
+//     '#4d908e',  // Blue-Green
+//     '#277da1',
+//     '#577590'   // Dark Blue
+// ],
+// borderColor: '#fff',
