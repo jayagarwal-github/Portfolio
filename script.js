@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         });
     }
-<<<<<<< HEAD
 
     // Add the new smooth scroll for .nav-link elements
     document.querySelectorAll('.nav-link').forEach(anchor => {
@@ -153,6 +152,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-=======
-});
->>>>>>> 1c6f33388872b5552a7b8df07f0f06554be3e055
