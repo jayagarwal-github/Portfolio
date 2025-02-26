@@ -353,6 +353,25 @@ nav ul li a {
 /* ..........................Landing Page............................ */
 /* .................................................................. */
 
+@keyframes ease-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+#home {
+    animation: ease-in-out 5s;
+}
+
 
 #home, #skills, #about, #projects, #contact {
     padding: 230px 200px;
@@ -401,7 +420,7 @@ nav ul li a {
 @media (max-width: 960px) {
     #home{
         display:inline-block;
-        margin-top: 18vh;
+        /* margin-top: 18vh; */
         text-align: center;
         height: 65vh;
     }
@@ -427,7 +446,7 @@ nav ul li a {
     #home{
         align-items: center;
         justify-content: center;
-        margin-top: 25vh;
+        margin-top: 56%;
         min-height: 80vh;
         animation: ease-in-out 5s;
     }
