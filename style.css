@@ -465,6 +465,33 @@ nav ul li a {
     }
 }
 
+@media (max-width: 380px) {
+    #home, #about, #projects, #contact {
+        padding: 20px; /* Adjust padding for very small screens */
+    }
+    
+    #home {
+        align-items: center;
+        justify-content: center;
+        margin-top: 40%; 
+        min-height: 80vh;
+        animation: ease-in-out 5s;
+        height: auto; 
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+    
+    #home h2 {
+        font-size: 1.5em;
+    }
+    
+    #home p {
+        font-size: 0.9em;
+
+    }
+}
 
 /* .................................................................. */
 /* .........................Project Section.......................... */
@@ -752,7 +779,7 @@ nav ul li a {
 }
 
 .skills-list li, .projects-list li {
-    font-size: 1em;
+    font-size: 1.8em;
     line-height: 1.6;
     margin: 5px 0;
 }
@@ -767,7 +794,7 @@ nav ul li a {
 }
 
 #skills h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
     color: #1ABC9C;
     margin-bottom: 20px;
