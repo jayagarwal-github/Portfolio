@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
             datasets: [{
                 label: 'Skill Levels',
-                data: [90, 40, 40, 35, 30, 35, 25], // Adjust these values as needed
+                data: [90, 40, 40, 35, 30, 35, 25],
                 backgroundColor: [
                         '#3DDC84',  // Android Green
                         '#7F52FF',  // Kotlin Purple
