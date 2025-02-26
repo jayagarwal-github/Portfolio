@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 label: 'Skill Levels',
                 data: [90, 40, 40, 35, 30, 35, 25], // Adjust these values as needed
                 backgroundColor: [
-                '#f9c74f',  // Yellow
-                '#f9f871',
-                '#90be6d',  // Green
-                '#43aa8b',
-                '#4d908e',  // Blue-Green
-                '#277da1',
-                '#577590'   // Dark Blue
+                        '#3DDC84',  // Android Green
+                        '#7F52FF',  // Kotlin Purple
+                        '#f89820',  // Java Orange
+                        '#FFCA28',  // Firebase Yellow
+                        '#F05032',  // Git Red
+                        '#4285F4',  // Google Blue
+                        '#00BCD4'   // Cyan
 ],
                 borderColor: '#fff',
                 borderColor: '#fff',
