@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Example animation for the home section
     const homeSection = document.getElementById('home');
     homeSection.style.opacity = 0;
     setTimeout(() => {
-        homeSection.style.transition = 'opacity 2s';
+        homeSection.style.transition = 'opacity 3s';
         homeSection.style.opacity = 1;
     }, 500);
 
-    // Remove the old navigation code and replace with this unified version
+    // Remove the old navigation code and replace with th unified version
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu a');
@@ -63,25 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Replace the theme toggle section with this:
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {  // Add null check
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            document.querySelectorAll('.project-box').forEach(box => {
-                box.classList.toggle('dark-theme');
-            });
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.classList.toggle('dark-theme');
-            });
-            document.querySelectorAll('.contact-icon').forEach(icon => {
-                icon.classList.toggle('dark-theme');
-            });
-            themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
-        });
-    }
-
-    // Add this just before creating the chart
+    // Console message for pie cshart initialization
     console.log('Initializing chart...');
     console.log('Canvas element:', document.getElementById('skillsChart'));
 
@@ -102,39 +83,39 @@ document.addEventListener('DOMContentLoaded', function() {
                         '#F05032',  // Git Red
                         '#4285F4',  // Google Blue
                         '#00BCD4'   // Cyan
-],
-                borderColor: '#fff',
-                borderColor: '#fff',
-                borderColor: '#131313',
-                borderColor: '#fff',
-                borderColor: '#fff',
-                borderColor: '#fff',
-                borderWidth: 1,
-                font: {
-                    color: '#111111'
+                        ],
+                            borderColor: '#fff',
+                            borderColor: '#fff',
+                            borderColor: '#131313',
+                            borderColor: '#fff',
+                            borderColor: '#fff',
+                            borderColor: '#fff',
+                            borderWidth: 1,
+                            font: {
+                                color: '#111111'
+                            }
+                        }]
+                    },
+            options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Skills Pie Chart'
+                        }
+                    }
                 }
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Skills Pie Chart'
-                }
-            }
-        }
-    });
+            });
     
     // Form submission handling
     const form = document.getElementById('queryForm');
     if (form) {
         form.addEventListener('submit', function(e) {
             // Form will be handled by Formspree automatically
-            // You can add loading states or success messages here
+            // This can add loading states or success messages here
             setTimeout(() => {
                 alert('Thank you for your message!');
                 form.reset();
@@ -159,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//Color Code for pir chart
+//Color Code for pie chart
 
 // backgroundColor: [
 //     '#a8dadc',  // Light Blue
