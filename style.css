@@ -158,7 +158,6 @@ nav ul li a {
     left: 0;
     width: 0;
     height: 2px;
-    /* background-color: #1ABC9C; */
     transition: width 0.3s ease;
 }
 
@@ -418,15 +417,20 @@ nav ul li a {
 }
 
 @media (max-width: 960px) {
+    #home, #about, #projects, #contact {
+        padding: 30px; /* Adjust padding for very small screens */
+    }
     #home{
-        display:inline-block;
-        /* margin-top: 18vh; */
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        height: 65vh;
+        margin-top: 50%;
+        min-height: 90vh;
+        animation: ease-in-out 5s;
     }
 
     #home h1 {
-        font-size: 4em
+        font-size: 3.2em
     }
     
     #home h2 {
@@ -446,7 +450,7 @@ nav ul li a {
     #home{
         align-items: center;
         justify-content: center;
-        margin-top: 56%;
+        margin-top: 50%;
         min-height: 80vh;
         animation: ease-in-out 5s;
     }
@@ -524,7 +528,6 @@ nav ul li a {
     width: 300px;
     height: 300px;
     margin-top: 60px;
-    /* scroll-snap-align: start; */
     position: relative;
     /* border: 1px solid #ddd; */
     transition: transform 0.5s, box-shadow 0.5s;
@@ -588,13 +591,12 @@ nav ul li a {
 
 .project-box h3 {
     padding: 15px;
-    /* margin: 70px; */
     font-size: 1.2em;
     color: #1ABC9C;
     z-index: 1;
-    text-align: center; /* Added text alignment */
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis for long names */
+    text-align: center; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 
 .project-box h3.dark-theme {
@@ -605,14 +607,11 @@ nav ul li a {
     font-size: 0.9em;
     line-height: 1.4;
     margin: 0;
-    /* padding: 0 12px; */
     width: 100%;
     max-height: 70%;
-    /* overflow-y: auto; */
     display: -webkit-box; 
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
-    /* overflow: hidden;     */
 }
 
 /* Hover Effects */
@@ -678,36 +677,37 @@ nav ul li a {
 
 @media (max-width: 768px) {
     #projects {
-        padding: 60px; /* Adjust padding for mobile */
-        min-height: 50vh; /* Increase min-height for mobile */
+        padding: 60px;
+        min-height: 50vh; 
     }
 
     .project-grid {
         gap: 20px;
         padding: 15px;
-        min-height: 450px; /* Increase height to accommodate project titles */
+        min-height: 450px; 
         
     }
 
     .project-box {
-        min-width: 250px;
-        height: 400px; /* Increase height for mobile */
+        min-width: 180px;
+        width: 250px;
+        height: 350px;
     }
 
     .project-content {
-        height: 250px; /* Adjust height for mobile */
+        height: 200px; 
     }
 
     .project-details h3 {
         font-size: 1.1em;
-        margin: 0; /* Remove default margin */
+        margin: 0; 
         padding: 10px; 
-        position: absolute; /* Position the title */
-        bottom: 0; /* Align to the bottom */
+        position: absolute; 
+        bottom: 0; 
         left: 0;
         width: 100%;
-        background-color: rgba(17, 17, 17, 0.7); /* Add background */
-        color: #fff; /* Set text color */
+        background-color: rgba(17, 17, 17, 0.7); 
+        color: #fff; 
         text-align: center;
     }
 
@@ -757,14 +757,14 @@ nav ul li a {
     }
 
     .project-box {
-        min-width: 200px;
-        height: 350px; /* Adjust height for smaller screens */
-        width: 250px;  /* Even smaller on very small screens */
+        min-width: 150px;
+        height: 360px; 
+        width: 220px; 
     }
 
     #projects {
-        padding: 30px; /* Adjust padding for smaller screens */
-        min-height: 50vh; /* Ensure full viewport height */
+        padding: 30px; 
+        min-height: 45vh; 
     }
 }
 
@@ -791,6 +791,7 @@ nav ul li a {
     padding: 30px 10px;
     background-color: #131313;
     min-height: 0vh;
+    /* width: 100%; */
 }
 
 #skills h1 {
@@ -815,25 +816,25 @@ nav ul li a {
 }
 
 #skillsChart {
-    width: 80%; /* Use percentage instead of vh */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center align */
+    width: 80%;
+    height: auto; 
+    margin: 20px auto; 
     display: block;
-    max-width: 500px; /* Set a maximum width */
+    max-width: 500px;
 }
 
 /* Skills Section Styles */
 @media screen and (max-width: 768px) {
     #skillsChart {
-        width: 90%; /* Adjust percentage for smaller screens */
+        width: 50%; 
         height: auto;
-        max-width: 400px; /* Set a maximum width */
+        max-width: 350px; /* Set a maximum width */
     }
 }
 
 @media screen and (max-width: 480px) {
     #skillsChart {
-        width: 95%; /* Adjust percentage for smaller screens */
+        width: 95%; 
         height: auto;
         max-width: 300px; /* Set a maximum width */
     }
@@ -930,6 +931,18 @@ nav ul li a {
 
     .about-text {
         text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .profile-pic{
+        margin-right: 0;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit:cover;
+        zoom: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -1107,9 +1120,6 @@ nav ul li a {
 }
 
 /* ................................................................................................ */
-/* ................................................................................................ */
-/* ................................................................................................ */
-/* ................................................................................................ */
 
 @keyframes slideIn {
     from {
@@ -1229,8 +1239,3 @@ footer p {
     margin: 0;
     font-size: 1em;
 }
-
-
-/* 570 785 */
-
-/* 469 676 */
