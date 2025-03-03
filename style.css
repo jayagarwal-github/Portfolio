@@ -502,8 +502,8 @@ nav ul li a {
 /* .................................................................. */
 
 #projects {
-    padding: 60px; /* Adjust padding for smaller screens */
-    min-height: 80vh; 
+    padding: 40px; /* Adjust padding for smaller screens */
+    min-height: 30vh; 
 }
 
 .project-grid {
