@@ -66,77 +66,143 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Initializing chart...');
     console.log('Canvas element:', document.getElementById('skillsChart'));
 
-    // Create a pie chart for skills using Chart.js
-    const ctx = document.getElementById('skillsChart').getContext('2d');
-    const skillsChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
-            datasets: [{
-                label: 'Skill Levels',
-                data: [90, 40, 40, 35, 30, 35, 25],
-                backgroundColor: [
-                        '#3DDC84',  // Android Green
-                        '#7F52FF',  // Kotlin Purple
-                        '#f89820',  // Java Orange
-                        '#FFCA28',  // Firebase Yellow
-                        '#F05032',  // Git Red
-                        '#4285F4',  // Google Blue
-                        '#00BCD4'   // Cyan
-                        ],
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderColor: '#131313',
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderWidth: 1,
-                            font: {
-                                color: '#111111'
-                            }
-                        }]
-                    },
-            options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Skills Pie Chart'
-                        }
-                    }
-                }
-            });
-    
-    // Form submission handling
-    const form = document.getElementById('queryForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            // Form will be handled by Formspree automatically
-            // This can add loading states or success messages here
-            setTimeout(() => {
-                alert('Thank you for your message!');
-                form.reset();
-            }, 1000);
+    // Initialize tooltips and popovers if needed
+    if (typeof bootstrap !== 'undefined') {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     }
 
-    // Add the new smooth scroll for .nav-link elements
-    document.querySelectorAll('.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the default anchor behavior
-
-            const targetId = this.getAttribute('href').substring(1); // Get the target ID without the #
-            const targetElement = document.getElementById(targetId);
-
-            // Scroll to the target element smoothly
-            targetElement.scrollIntoView({
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('.navbar .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            // Close the mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(navbarCollapse).hide();
+            }
+            
+            // Smooth scroll to target
+            window.scrollTo({
+                top: targetSection.offsetTop - 70, // Adjust for navbar height
                 behavior: 'smooth'
             });
         });
     });
+
+    // Navbar background change on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
+
+    // Active link highlighting based on scroll position
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+        
+        let currentSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= sectionTop - 200) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveNavLink);
+    
+    // Animate on scroll effect
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.animate__animated');
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect();
+            const isVisible = (elementPosition.top <= window.innerHeight * 0.8);
+            
+            if (isVisible && !element.classList.contains('animate__show')) {
+                element.classList.add('animate__show');
+            }
+        });
+        
+        // Animate skill bars when they come into view
+        const skillBars = document.querySelectorAll('.progress-bar');
+        skillBars.forEach(bar => {
+            const barPosition = bar.getBoundingClientRect();
+            const isVisible = (barPosition.top <= window.innerHeight * 0.8);
+            
+            if (isVisible && !bar.classList.contains('animated')) {
+                const targetWidth = bar.getAttribute('aria-valuenow') + '%';
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                    bar.classList.add('animated');
+                }, 100);
+            }
+        });
+
+        // Animate skill circles when they come into view
+        const skillCircles = document.querySelectorAll('.skill-circle');
+        skillCircles.forEach(circle => {
+            const circlePosition = circle.getBoundingClientRect();
+            const isVisible = (circlePosition.top <= window.innerHeight * 0.9);
+            
+            if (isVisible && !circle.classList.contains('animated')) {
+                const percentage = circle.style.getPropertyValue('--percentage');
+                circle.style.setProperty('--percentage', '0');
+                setTimeout(() => {
+                    circle.style.setProperty('--percentage', percentage);
+                    circle.classList.add('animated');
+                }, 100);
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check
+
+    // Form submission with original form design
+    const form = document.getElementById('queryForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Visual feedback
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.opacity = 0.7;
+            
+            // Form is handled by Formspree, we just add visual feedback
+            setTimeout(() => {
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.backgroundColor = '#16a085';
+                
+                // Reset form and button after delay
+                setTimeout(() => {
+                form.reset();
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.style.backgroundColor = '#1ABC9C';
+                    submitBtn.style.opacity = 1;
+                }, 3000);
+            }, 1500);
+        });
+    }
 });
 
 

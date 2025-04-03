@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Jay Agarwal - Android Developer Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
   <!-- Meta Description -->
   <meta name="description" content="Jay Agarwal is a professional Android developer showcasing innovative projects such as Nexa Connect, Notes App, News App, and Meme App. Skilled in Kotlin, Jetpack Compose, Firebase, and REST APIs.">
-  <meta name="author" content="undefined">
-  <meta name="keywords" content="undefined">
+  <meta name="author" content="Jay Agarwal">
+  <meta name="keywords" content="Android Developer, Kotlin, Firebase, Portfolio">
   
-
   <!-- Robots Directive -->
   <meta name="robots" content="index, follow">
   
@@ -20,196 +24,444 @@
   <link rel="canonical" href="https://jayagarwal.in/">
 
   <!-- Open Graph / Facebook Meta Tags -->
-   <meta property="og:site_name" content="Jay Agarwal - Android Developer Portfolio">
+  <meta property="og:site_name" content="Jay Agarwal - Android Developer Portfolio">
   <meta property="og:title" content="Jay Agarwal - Android Developer Portfolio">
   <meta property="og:description" content="Discover Jay Agarwal's portfolio featuring Android projects like Nexa Connect, Notes App, News App, and Meme App. Expert in Kotlin, Firebase, and modern Android development.">
   <meta property="og:url" content="https://jayagarwal.in/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://jayagarwal.in/assets/Android%20Logo.png">
 
-  <link rel="icon" href= "https://jayagarwal.in/assets/Android%20Logo.png" type="image/x-icon" />
+  <link rel="icon" href="https://jayagarwal.in/assets/Android%20Logo.png" type="image/x-icon" />
   <link rel="shortcut icon" href="https://jayagarwal.in/assets/Android%20Logo.png" type="image/x-icon" />
   <link rel="apple-touch-icon" href="https://jayagarwal.in/assets/Android%20Logo.png" />
-
-  
 
   <!-- Google Meta Tags -->
   <meta itemprop="name" content="Jay Agarwal - Android Developer Portfolio">
   <meta itemprop="description" content="Explore innovative Android projects by Jay Agarwal, featuring Nexa Connect, Notes App, News App, and Meme App.">
   <meta itemprop="image" content="https://jayagarwal.in/assets/Android%20Logo.png">
 
-
   <meta name="next-head-count" content="10">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   <meta http-equiv="pragma" content="no-cache">
 
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jay Agarwal - Android Developer Portfolio">
-<meta name="twitter:description" content="Explore innovative Android projects by Jay Agarwal, featuring Nexa Connect, Notes App, News App, and Meme App.">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jay Agarwal - Android Developer Portfolio">
+  <meta name="twitter:description" content="Explore innovative Android projects by Jay Agarwal, featuring Nexa Connect, Notes App, News App, and Meme App.">
 
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&family=Lato:wght@400;700&display=swap"
-    rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <header>
-    <nav class="navbar">
-        <button class="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Jay Agarwal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
-    </nav>
-</header>
-
-  <section id="home" class="animate-on-scroll">
-    <h1>Welcome to My Portfolio</h1>
-    <h2>Hi, I'm Jay Agarwal</h2>
-    <p>Android Developer</p>
-  </section>
-
-  <section id="projects" class="animate-on-scroll">
-    <h1>My Projects</h1>
-
-    <div class="project-grid">
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank">
-          <div class="project-content">
-            <img src="./assets/Notes.png" alt="Notes App">
-            <div class="project-details">
-              <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Invest wise India</h3>
       </div>
+    </div>
+  </nav>
 
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank">
-          <div class="project-content">
-            <img src="./assets/Notes.png" alt="Notes App">
-            <div class="project-details">
-              <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Advanced Erp App</h3>
-      </div>
-
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank">
-          <div class="project-content">
-            <img src="./assets/Notes.png" alt="Notes App">
-            <div class="project-details">
-              <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Advanced ToDo List</h3>
-      </div>
-
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Nexa-Connect" target="_blank">
-          <div class="project-content">
-            <img src="./assets/nexalogo1.png" alt="Nexa Connect">
-            <div class="project-details">
-              <p class="project-description">Nexa Connect is an Android messaging application built with Kotlin and XML, utilizing Firebase for real-time data synchronization. Users can authenticate with Google Sign-In and engage in a shared messaging experience.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Nexa Connect</h3>
-      </div>
-
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank">
-          <div class="project-content">
-            <img src="./assets/Notes.png" alt="Notes App">
-            <div class="project-details">
-              <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Notes App</h3>
-      </div>
-
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Daily-News-App" target="_blank">
-          <div class="project-content">
-            <img src="./assets/Daily_News1.png" alt="News App">
-            <div class="project-details">
-              <p class="project-description">Delivers the latest news with a seamless user experience, leveraging APIs for content and Chrome Custom Tabs for article viewing.</p>
-            </div>
-          </div>
-        </a>
-        <h3>News App</h3>
-      </div>
-
-      <div class="project-box">
-        <a href="https://github.com/jayagarwal-github/Meme-App" target="_blank">
-          <div class="project-content">
-            <img src="./assets/meme logo.png" alt="Meme App">
-            <div class="project-details">
-              <p class="project-description">Delivers a fresh stream of memes using the Dank Meme API, with features to filter duplicates, browse previous memes, and easily share with friends.</p>
-            </div>
-          </div>
-        </a>
-        <h3>Meme App</h3>
-      </div>
+  <!-- Hero Section -->
+  <section id="home" class="section-hero min-vh-100 d-flex align-items-center">
+    <div class="container text-center">
+      <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeIn">Welcome to My Portfolio</h1>
+      <h2 class="display-5 mb-4 animate__animated animate__fadeIn animate__delay-1s">Hi, I'm Jay Agarwal</h2>
+      <p class="lead animate__animated animate__fadeIn animate__delay-2s">Android Developer</p>
     </div>
   </section>
 
-  <section id="skills" class="animate-on-scroll">
-    <h1>My Skills</h1>
-    <canvas id="skillsChart" width="100" height="100"></canvas>
-    </section>  
-
-  <section id="about" class="animate-on-scroll">
-    <div class="about-content">
-        <img src="./assets/Android Logo.png" alt="Profile Picture" class="profile-pic">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>Hi, I'm Jay Agarwal, an Android Developer with a passion for creating innovative and user-friendly applications with a strong background in Kotlin, Jetpack, Xml and other programming languages, I have developed several projects that showcase my skills and creativity.</p>
-            <p>I am always eager to learn new technologies and improve my skills. I enjoy working on challenging projects that push me to think outside the box and come up with unique solutions.</p>
-            <p>In my free time, I love exploring new places, learning about Science & Technology. I believe in continuous learning and strive to stay updated with the latest trends in the tech industry.</p>
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li>Android Development</li>
-                <li>Kotlin</li>
-                <li>Jetpack Compose & XML</li>
-                <li>REST APIs</li>
-                <li>Firebase</li>
-                <li>C & C++</li>
-                <li>Git & github</li>
-                <li>Java</li>
-                <li>HTML & CSS</li>
-                <li>Python (Basics)</li>
-            </ul>
-            <h3>Experience</h3>
-            <p>I have worked on various projects, including chat applications, note-keeping apps, and more. My experience includes working to deliver high-quality software solutions.</p>
-            <h3>Education</h3>
-            <p>Bachelor's of Computer Applications</p>
-            <p>12th Pcm</p>
-            <!-- Add Resume Download Button -->
-            <a href="https://drive.google.com/file/d/1kXSpeoztwRFLs3a2rB8-G0sCDrVYhXqe/view?usp=sharing" class="resume-btn" download>Download Resume</a>
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">My Projects</h1>
+      
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/Notes.png" alt="Notes App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Invest wise India</h5>
+              </div>
+            </a>
+          </div>
         </div>
+        
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/Notes.png" alt="Notes App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Advanced Erp App</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/Notes.png" alt="Notes App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Advanced ToDo List</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Nexa-Connect" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/nexalogo1.png" alt="Nexa Connect" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Nexa Connect is an Android messaging application built with Kotlin and XML, utilizing Firebase for real-time data synchronization. Users can authenticate with Google Sign-In and engage in a shared messaging experience.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Nexa Connect</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Notes_Keeping_Application" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/Notes.png" alt="Notes App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Offline note storage using Room database. Edit, delete, and retain notes even after app termination.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Notes App</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Daily-News-App" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/Daily_News1.png" alt="News App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Delivers the latest news with a seamless user experience, leveraging APIs for content and Chrome Custom Tabs for article viewing.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">News App</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 7 -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card project-card h-100">
+            <a href="https://github.com/jayagarwal-github/Meme-App" target="_blank" class="text-decoration-none">
+              <div class="card-img-wrapper">
+                <img src="./assets/meme logo.png" alt="Meme App" class="card-img-top">
+                <div class="project-overlay">
+                  <p class="project-description">Delivers a fresh stream of memes using the Dank Meme API, with features to filter duplicates, browse previous memes, and easily share with friends.</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Meme App</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-  <section id="contact" class="animate-on-scroll">
-    <h2>Get in Touch</h2>
-    
-    <!-- Add the form before the contact icons -->
-    <div class="contact-form">
+  <!-- Skills Section -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">My Skills</h1>
+      
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+          <div class="skills-intro text-center mb-4">
+            <p class="lead">I specialize in Android development with expertise in various technologies and programming languages.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mb-5">
+        <div class="col-lg-6 mb-4">
+          <!-- CSS Skill Circles instead of Chart.js -->
+          <div class="skills-chart-container">
+            <h3 class="text-center mb-4">Skills Distribution</h3>
+            <div class="skill-circles-container">
+              <div class="skill-circle-row">
+                <div class="skill-circle" style="--percentage: 90; --color: #3DDC84;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">90%</span>
+                    <span class="skill-name">Android Dev</span>
+                  </div>
+                </div>
+                <div class="skill-circle" style="--percentage: 85; --color: #7F52FF;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">85%</span>
+                    <span class="skill-name">Kotlin</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-circle-row">
+                <div class="skill-circle" style="--percentage: 80; --color: #FFCA28;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">80%</span>
+                    <span class="skill-name">Firebase</span>
+                  </div>
+                </div>
+                <div class="skill-circle" style="--percentage: 75; --color: #f89820;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">75%</span>
+                    <span class="skill-name">Java</span>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-circle-row">
+                <div class="skill-circle" style="--percentage: 70; --color: #F05032;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">70%</span>
+                    <span class="skill-name">Git</span>
+                  </div>
+                </div>
+                <div class="skill-circle" style="--percentage: 65; --color: #4285F4;">
+                  <div class="skill-circle-inner">
+                    <span class="skill-percent">65%</span>
+                    <span class="skill-name">HTML/CSS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <!-- Skill bars -->
+          <div class="skills-bars">
+            <h3 class="text-center mb-4">Proficiency Levels</h3>
+            
+            <div class="skill-item">
+              <div class="skill-info d-flex justify-content-between">
+                <span>Android Development</span>
+                <span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info d-flex justify-content-between">
+                <span>Kotlin</span>
+                <span>85%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info d-flex justify-content-between">
+                <span>Java</span>
+                <span>75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info d-flex justify-content-between">
+                <span>Firebase</span>
+                <span>80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-info d-flex justify-content-between">
+                <span>Git & Github</span>
+                <span>70%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Skill categories with icons -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>App Development</h3>
+            </div>
+            <ul class="skill-tags">
+              <li><span>Android SDK</span></li>
+              <li><span>Jetpack Compose</span></li>
+              <li><span>XML Layouts</span></li>
+              <li><span>Firebase</span></li>
+              <li><span>REST APIs</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-code"></i>
+              <h3>Languages</h3>
+            </div>
+            <ul class="skill-tags">
+              <li><span>Kotlin</span></li>
+              <li><span>Java</span></li>
+              <li><span>C/C++</span></li>
+              <li><span>HTML/CSS</span></li>
+              <li><span>Python (Basic)</span></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="skill-category">
+            <div class="skill-category-header">
+              <i class="fas fa-tools"></i>
+              <h3>Tools & Methods</h3>
+            </div>
+            <ul class="skill-tags">
+              <li><span>Git</span></li>
+              <li><span>GitHub</span></li>
+              <li><span>OOP</span></li>
+              <li><span>Android Studio</span></li>
+              <li><span>MVVM</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+              <img src="./assets/Android Logo.png" alt="Profile Picture" class="img-fluid rounded-circle profile-img">
+            </div>
+            <div class="col-md-8">
+              <h2 class="mb-4">About Me</h2>
+              <p>Hi, I'm Jay Agarwal, an Android Developer with a passion for creating innovative and user-friendly applications with a strong background in Kotlin, Jetpack, Xml and other programming languages, I have developed several projects that showcase my skills and creativity.</p>
+              <p>I am always eager to learn new technologies and improve my skills. I enjoy working on challenging projects that push me to think outside the box and come up with unique solutions.</p>
+              <p>In my free time, I love exploring new places, learning about Science & Technology. I believe in continuous learning and strive to stay updated with the latest trends in the tech industry.</p>
+              
+              <h3 class="mt-4 mb-3">Skills</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-unstyled skills-list">
+                    <li><i class="fas fa-check-circle me-2"></i>Android Development</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Kotlin</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Jetpack Compose & XML</li>
+                    <li><i class="fas fa-check-circle me-2"></i>REST APIs</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Firebase</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled skills-list">
+                    <li><i class="fas fa-check-circle me-2"></i>C & C++</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Git & Github</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Java</li>
+                    <li><i class="fas fa-check-circle me-2"></i>HTML & CSS</li>
+                    <li><i class="fas fa-check-circle me-2"></i>Python (Basics)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h3 class="mt-4 mb-3">Experience</h3>
+              <p>I have worked on various projects, including chat applications, note-keeping apps, and more. My experience includes working to deliver high-quality software solutions.</p>
+              
+              <h3 class="mt-4 mb-3">Education</h3>
+              <p>Bachelor's of Computer Applications</p>
+              <p>12th Pcm</p>
+              
+              <div class="mt-4">
+                <a href="https://drive.google.com/file/d/1kXSpeoztwRFLs3a2rB8-G0sCDrVYhXqe/view?usp=sharing" class="btn btn-outline-primary" download>Download Resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Get in Touch</h2>
+      
+      <!-- Restore the original form design -->
+      <div class="contact-form">
         <form id="queryForm" action="https://formspree.io/f/xqaeobow" method="POST">
             <div class="form-group">
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -225,37 +477,43 @@
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
-    </div>
-
-    <div class="contact-icons">
-      <a href="tel:+919548897173" class="contact-icon">
-        <i class="fas fa-phone"></i>
-      </a>
-      <a href="mailto:jayagarwal634@gmail.com" target="_blank" class="contact-icon">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://wa.me/919548897173" target="_blank" class="contact-icon">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/jayagarwal634/" target="_blank" class="contact-icon">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/jayagarwal-github" target="_blank" class="contact-icon">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://instagram.com/jayagarwal634" target="_blank" class="contact-icon">
-        <i class="fab fa-instagram"></i>
-      </a>
+      </div>
+      
+      <div class="social-links text-center mt-4">
+        <div class="d-flex justify-content-center">
+          <a href="tel:+919548897173" class="social-icon mx-2">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="mailto:jayagarwal634@gmail.com" target="_blank" class="social-icon mx-2">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/919548897173" target="_blank" class="social-icon mx-2">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jayagarwal634/" target="_blank" class="social-icon mx-2">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/jayagarwal-github" target="_blank" class="social-icon mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://instagram.com/jayagarwal634" target="_blank" class="social-icon mx-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
-
-  <!-- Add this at the end of your body tag -->
-  <footer>
-    <p>&copy; 2025 Jay Agarwal. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p>&copy; 2025 Jay Agarwal. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
