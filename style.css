@@ -536,7 +536,7 @@ nav ul li a {
 }
 
 #projects h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     color: #1ABC9C;
     margin-bottom: 40px;
@@ -721,6 +721,11 @@ nav ul li a {
     .project-box img {
         max-height: 180px;
     }
+
+    #projects h1 {
+        font-size: 1.6em;
+        margin-bottom: 30px;
+    }
 }
 
 /* .................................................................. */
@@ -771,6 +776,11 @@ nav ul li a {
     #projects {
         padding: 30px; 
         min-height: 45vh; 
+    }
+
+    #projects h1 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
     }
 }
 
