@@ -90,8 +90,9 @@ section {
   border: none;
   border-radius: 15px;
   overflow: hidden;
-    transition: transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  will-change: transform; /* Performance optimization for mobile */
 }
 
 .project-card:hover {
@@ -151,8 +152,8 @@ section {
 }
 
 .card-body {
-  background-color: #000000;
-        padding: 15px;
+  background-color: #111;
+  padding: 15px;
 }
 
 .card-title {
@@ -561,7 +562,12 @@ footer {
 
 @media (max-width: 768px) {
   section {
-    padding: 80px 0;
+    padding: 80px 0 60px;
+  }
+  
+  .section-hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
   
   .section-hero h1 {
@@ -574,6 +580,7 @@ footer {
   
   .profile-img {
     margin-bottom: 30px;
+    max-width: 180px;
   }
   
   .skill-category {
@@ -587,15 +594,37 @@ footer {
   .skill-tags {
     justify-content: center;
   }
+  
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
+/* Small tablets and large phones */
 @media (max-width: 576px) {
+  section {
+    padding: 60px 0 40px;
+  }
+  
+  .section-hero {
+    padding-top: 90px;
+    min-height: 90vh !important;
+  }
+  
   .section-hero h1 {
     font-size: 2rem;
+    margin-bottom: 15px;
   }
   
   .section-hero h2 {
     font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+  
+  h1.text-center {
+    font-size: 2rem;
+    margin-bottom: 30px;
   }
   
   .social-icon {
@@ -620,6 +649,177 @@ footer {
   
   .skill-name {
     font-size: 0.7rem;
+  }
+  
+  .skill-circles-container {
+    gap: 15px;
+  }
+  
+  .skill-circle-row {
+    gap: 10px;
+  }
+  
+  .project-card {
+    margin-bottom: 15px;
+  }
+  
+  /* Adjust spacing in about section */
+  #about h3 {
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0 30px;
+  }
+  
+  .section-hero {
+    padding-top: 80px;
+  }
+  
+  .section-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-hero p {
+    font-size: 1rem;
+  }
+  
+  h1.text-center {
+    font-size: 1.8rem;
+  }
+  
+  /* Smaller skill circles for better fit */
+  .skill-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .skill-percent {
+    font-size: 0.9rem;
+  }
+  
+  .skill-name {
+    font-size: 0.65rem;
+  }
+  
+  /* Better project card spacing on very small screens */
+  .row.g-4 {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .row.g-4 > div {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .card-img-wrapper {
+    height: 160px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  /* Better form display on small screens */
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .form-group textarea {
+    height: 120px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Adjust spacing in social icons */
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin: 0 4px;
+  }
+  
+  /* Improve skill category display */
+  .skill-category {
+    padding: 15px;
+  }
+  
+  .skill-category-header i {
+    font-size: 1.5rem;
+  }
+  
+  .skill-category-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .skill-tags span {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+  /* Improve social icon layout on mobile */
+  .d-flex.justify-content-center {
+    flex-wrap: wrap;
+  }
+  
+  /* Better spacing for form elements */
+  .contact-form {
+    padding: 15px 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .submit-btn {
+    margin-top: 10px;
+  }
+  
+  /* Adjust skill circles row on small screens */
+  .skill-circles-container {
+    margin-top: 10px;
+  }
+  
+  /* Better navbar experience on mobile */
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .navbar-collapse {
+    max-height: 80vh;
+    overflow-y: auto;
   }
 }
 
@@ -650,4 +850,44 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* For mobile browsers */
+@media (hover: none) {
+  .project-card:active {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-overlay {
+    opacity: 0.9; /* Make overlay more visible on mobile */
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .card-img-top {
+    filter: blur(1px); /* Slightly blur by default on mobile */
+  }
+  
+  .skill-circle:active {
+    transform: scale(1.05);
+  }
+  
+  .skill-tags span:active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+}
+
+/* Force GPU acceleration for smoother animations on mobile */
+.project-card, 
+.skill-circle, 
+.social-icon,
+.btn-outline-primary,
+.navbar-dark .navbar-nav .nav-link,
+.progress-bar,
+.skill-category {
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
 }
