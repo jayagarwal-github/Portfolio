@@ -467,6 +467,13 @@ nav ul li a {
         font-size: 1em;
         /* white-space: nowrap; */
     }
+
+    .project-box {
+        min-width: 130px;
+        height: 250px; /* Reduced from 300px to better match content */
+        width: 100%;
+        margin-top: 20px; /* Reduced from 60px for more compact display */
+    }
 }
 
 @media (max-width: 380px) {
@@ -549,6 +556,7 @@ nav ul li a {
     transition: filter 0.3s ease-in-out;
     background-color: white;
     border-radius: 20px;
+    max-height: 220px; /* Limit maximum height */
 }
 
 .project-details {
@@ -644,7 +652,7 @@ nav ul li a {
     }
 
     .project-content {
-        height: 250px; 
+        height: 200px; 
     }
 
     .project-details h3 {
@@ -663,6 +671,10 @@ nav ul li a {
     .project-description {
         font-size: 0.85em;
         line-height: 1.3;
+    }
+
+    .project-box img {
+        max-height: 200px;
     }
 } 
 
@@ -685,7 +697,7 @@ nav ul li a {
     }
 
     .project-content {
-        height: 200px; 
+        height: 180px; 
     }
 
     .project-details h3 {
@@ -705,6 +717,10 @@ nav ul li a {
         font-size: 0.85em;
         line-height: 1.3;
     }
+
+    .project-box img {
+        max-height: 180px;
+    }
 }
 
 /* .................................................................. */
@@ -712,9 +728,8 @@ nav ul li a {
 /* .................................................................. */
 
 @media (max-width: 480px) {
-
     .project-content {
-        height: 200px; /* Adjust height for smaller screens */
+        height: 150px;
     }
 
     .project-details h3 {
@@ -736,11 +751,6 @@ nav ul li a {
         -webkit-line-clamp: 4;
     }
 
-    .project-box {
-        min-width: 200px;
-        height: 180px;
-    }
-
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -749,8 +759,13 @@ nav ul li a {
 
     .project-box {
         min-width: 130px;
-        height: 300px; 
-        width: 100%; 
+        height: 250px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .project-box img {
+        max-height: 150px;
     }
 
     #projects {
@@ -768,15 +783,20 @@ nav ul li a {
     
     .project-box {
         min-width: 100%;
-        height: 280px;
+        height: 220px; /* Reduced from 280px */
+        margin-top: 15px;
     }
     
     .project-content {
-        height: 180px;
+        height: 140px;
     }
     
     .project-description {
         -webkit-line-clamp: 3;
+    }
+
+    .project-box img {
+        max-height: 140px;
     }
 }
 
