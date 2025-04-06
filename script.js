@@ -69,46 +69,72 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create a pie chart for skills using Chart.js
     const ctx = document.getElementById('skillsChart').getContext('2d');
     const skillsChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Android Development', 'Kotlin', 'OOPs', 'C, C++, Java', 'HTML5', 'CSS3', 'Python (basics)'],
-            datasets: [{
-                label: 'Skill Levels',
-                data: [90, 40, 40, 35, 30, 35, 25],
-                backgroundColor: [
-                        '#3DDC84',  // Android Green
-                        '#7F52FF',  // Kotlin Purple
-                        '#f89820',  // Java Orange
-                        '#FFCA28',  // Firebase Yellow
-                        '#F05032',  // Git Red
-                        '#4285F4',  // Google Blue
-                        '#00BCD4'   // Cyan
-                        ],
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderColor: '#131313',
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderColor: '#fff',
-                            borderWidth: 1,
-                            font: {
-                                color: '#111111'
-                            }
-                        }]
-                    },
-            options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Skills Pie Chart'
-                        }
-                    }
+    type: 'pie',
+    data: {
+        labels: [
+            'Android Development', 
+            'Android Studio', 
+            'Kotlin', 
+            'Jetpack Compose', 
+            'XML', 
+            'Firebase', 
+            'Room Database', 
+            'JSON, API',
+            'OOPs', 
+            'C, C++, Java', 
+            'HTML5', 
+            'CSS3', 
+            'Python (basics)',
+            'Git', 
+            'GitHub'
+        ],
+        datasets: [{
+            label: 'Skill Levels',
+            data: [90, 85, 80, 75, 70, 70, 90, 70, 95, 85, 90, 80, 50, 70, 85],
+            backgroundColor: [
+                '#3DDC84',  // Android Development
+                '#2E7D32',  // Android Studio
+                '#7F52FF',  // Kotlin
+                '#9575CD',  // Jetpack Compose
+                '#D4E157',  // XML
+                '#FFCA28',  // Firebase
+                '#00BCD4',  // Room DB
+                '#81D4FA',  // JSON, API
+                '#90A4AE',  // OOPs
+                '#F4511E',  // C, C++, Java
+                '#FF7043',  // HTML5
+                '#29B6F6',  // CSS3
+                '#4DB6AC',  // Python
+                '#F05032',  // Git
+                '#24292e'   // GitHub
+            ],
+            borderColor: '#fff',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    color: '#FFFFFF' // <-- white legend labels
                 }
-            });
+            },
+            tooltip: {
+                titleColor: '#FFFFFF',   // white tooltip title
+                bodyColor: '#FFFFFF',    // white tooltip body
+                backgroundColor: '#333333' // dark background for contrast
+            },
+            title: {
+                display: true,
+                text: 'Skills Pie Chart',
+                color: '#FFFFFF' // <-- white chart title
+            }
+        }
+    }
+});
+
     
     // Form submission handling
     const form = document.getElementById('queryForm');

@@ -4,9 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles after Bootstrap to override -->
+  <link rel="stylesheet" href="style.css">
 
   <title>Jay Agarwal - Android Developer Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
   <!-- Meta Description -->
   <meta name="description" content="Jay Agarwal is a professional Android developer showcasing innovative projects such as Nexa Connect, Notes App, News App, and Meme App. Skilled in Kotlin, Jetpack Compose, Firebase, and REST APIs.">
   <meta name="author" content="undefined">
@@ -53,10 +58,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&family=Lato:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="custom-theme">
   <header>
     <nav class="navbar">
         <button class="hamburger">
@@ -185,19 +189,36 @@
             <p>Hi, I'm Jay Agarwal, an Android Developer with a passion for creating innovative and user-friendly applications with a strong background in Kotlin, Jetpack, Xml and other programming languages, I have developed several projects that showcase my skills and creativity.</p>
             <p>I am always eager to learn new technologies and improve my skills. I enjoy working on challenging projects that push me to think outside the box and come up with unique solutions.</p>
             <p>In my free time, I love exploring new places, learning about Science & Technology. I believe in continuous learning and strive to stay updated with the latest trends in the tech industry.</p>
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li>Android Development</li>
-                <li>Kotlin</li>
-                <li>Jetpack Compose & XML</li>
-                <li>REST APIs</li>
-                <li>Firebase</li>
-                <li>C & C++</li>
-                <li>Git & github</li>
-                <li>Java</li>
-                <li>HTML & CSS</li>
-                <li>Python (Basics)</li>
-            </ul>
+            <h3 class="mt-4 mb-3">Skills</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="list-unstyled skills-list">
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Android Development</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Android Studio</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Kotlin</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Jetpack Compose</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>XML</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Firebase</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Room Database</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>JSON, API</li>
+                </ul>
+              </div>
+              
+              <div class="col-md-6">
+                <ul class="list-unstyled skills-list">
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>OOPs</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>C, C++, Java</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>HTML5</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>CSS3</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Python (Basics)</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>Git</li>
+                  <li><i class="fas fa-check-circle me-2 text-success"></i>GitHub</li>
+                </ul>
+              </div>
+              
+            </div>
+            
+            
             <h3>Experience</h3>
             <p>I have worked on various projects, including chat applications, note-keeping apps, and more. My experience includes working to deliver high-quality software solutions.</p>
             <h3>Education</h3>
@@ -255,6 +276,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Add this at the end of your body tag -->
   <footer>
