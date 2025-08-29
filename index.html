@@ -2,610 +2,614 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Agarwal - Android Developer</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.13.0/umd/material-ui.production.min.js"></script>
-    <script src="https://unpkg.com/framer-motion@9.0.0/dist/framer-motion.js"></script>
-    <!-- GSAP libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Agarwal - Android Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mui/material@5.13.0/umd/material-ui.production.min.js"></script>
+  <script src="https://unpkg.com/framer-motion@9.0.0/dist/framer-motion.js"></script>
+  <!-- GSAP libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 
 
 
-    <link rel="stylesheet" href="style.css">
-    <!-- <link src="script.js"> -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <link src="script.js"> -->
 
-    <!-- <style>
+  <!-- <style>
        
     </style> -->
 </head>
 
 <body>
-    <header>
-        <div class="header-container container">
-            <div class="logo">Jay<span>.</span></div>
-            <nav class="nav-menu" id="navMenu">
-                <a href="about" class="nav-link">About</a>
-                <a href="skills" class="nav-link">Skills</a>
-                <a href="projects" class="nav-link">Projects</a>
-                <a href="experience" class="nav-link">Experience</a>
-                <a href="contact" class="nav-link">Contact</a>
-            </nav>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
+  <header>
+    <div class="header-container container">
+      <div class="logo">Jay<span>.</span></div>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="availability-chip">Available for opportunities</div>
+          <h1 class="hero-title">Hi, I'm Jay — <span>Full Stack</span> Developer</h1>
+          <p class="hero-subtitle">Crafting scalable Web & Android experiences</p>
+
+          <p class="hero-description">
+            I'm a Full Stack Developer passionate about designing and automating end-to-end solutions across
+            web
+            and mobile platforms. From building Android apps with Kotlin and Firebase to developing robust
+            web applications
+            with modern frameworks, I specialize in streamlining workflows, optimizing performance, and
+            delivering
+            scalable, user-centric products powered by automation.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
+            <a href="#about" class="btn btn-text">More <i class="fas fa-arrow-down"></i></a>
+          </div>
+          <div class="tech-stack">
+            <div class="tech-chip">Kotlin</div>
+            <div class="tech-chip">Jetpack</div>
+            <div class="tech-chip">Node.js</div>
+            <div class="tech-chip">React</div>
+            <!-- <div class="tech-chip">Firebase</div> -->
+            <div class="tech-chip">Mysql</div>
+            <div class="tech-chip">REST API</div>
+          </div>
         </div>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="availability-chip">Available for opportunities</div>
-                    <h1 class="hero-title">Hi, I'm Jay — <span>Full Stack</span> Developer</h1>
-                    <p class="hero-subtitle">Crafting scalable Web & Android experiences</p>
-
-                    <p class="hero-description">
-                        I'm a Full Stack Developer passionate about designing and automating end-to-end solutions across
-                        web
-                        and mobile platforms. From building Android apps with Kotlin and Firebase to developing robust
-                        web applications
-                        with modern frameworks, I specialize in streamlining workflows, optimizing performance, and
-                        delivering
-                        scalable, user-centric products powered by automation.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="projects" class="btn btn-primary">View Projects</a>
-                        <a href="contact" class="btn btn-outline">Contact</a>
-                        <a href="about" class="btn btn-text">More <i class="fas fa-arrow-down"></i></a>
-                    </div>
-                    <div class="tech-stack">
-                        <div class="tech-chip">Kotlin</div>
-                        <div class="tech-chip">Jetpack</div>
-                        <div class="tech-chip">Node.js</div>
-                        <div class="tech-chip">React</div>
-                        <!-- <div class="tech-chip">Firebase</div> -->
-                        <div class="tech-chip">Mysql</div>
-                        <div class="tech-chip">REST API</div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="avatar-container">
-                        <img src="./assets/profile_pic.jpg" alt="Jay Agarwal" class="avatar">
-                    </div>
-                </div>
-            </div>
+        <div class="hero-image">
+          <div class="avatar-container">
+            <img src="./assets/profile_pic.jpg" alt="Jay Agarwal" class="avatar">
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div>
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">Bridging Android, Web & Cloud</p>
-                </div>
-                <div>
-                    <h2> Freelance Full-Stack Developer | Android & Web Specialist</h2><br>
-
-                    <p>
-                        I design and build <strong>end-to-end digital solutions</strong> that seamlessly connect mobile
-                        apps,
-                        web platforms, and scalable back-end systems. With a strong foundation in
-                        <strong>Kotlin + Jetpack Compose</strong> for Android and modern web frameworks, I create
-                        products
-                        that are <em>fast, secure, and user-friendly</em>.
-                    </p>
-
-                    <p>
-                        My approach blends <strong>creative front-end design</strong> with <strong>solid back-end
-                            engineering</strong>.
-                        From crafting pixel-perfect mobile UIs to developing APIs, managing databases, and deploying
-                        cloud-based architectures, I ensure that every layer of your product ecosystem works in harmony.
-                    </p>
-
-                    <p>
-                        I thrive on projects that demand <strong>innovation, scalability, and automation</strong>. With
-                        clear communication
-                        and an agile mindset, I partner with clients to bring their ideas to life while ensuring
-                        <strong>technical excellence</strong> and long-term maintainability.
-                    </p>
-
-                    <blockquote class="quote">
-                        "Let’s build not just an app or a website, but a connected ecosystem your users will love."
-                    </blockquote>
-
-                    <div class="skills-grid" style="margin-top: 32px;">
-                        <div class="skill-item">📱 Android (Kotlin, Jetpack, Compose)</div>
-                        <div class="skill-item">🌐 Web (React, Node.js, Express, Tailwind )</div>
-                        <div class="skill-item">🗄️ Databases (MySQL, Firebase, Room)</div>
-                        <div class="skill-item">⚡ API Integration (REST/JSON)</div>
-                        <div class="skill-item">☁️ Cloud & Deployment (Docker, VPS)</div>
-                        <div class="skill-item">🛠️ Git / GitHub / CI-CD</div>
-                        <div class="skill-item">💡 Problem Solving & OOPs</div>
-                    </div>
-                </div>
-            </div>
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging Android, Web & Cloud</p>
         </div>
-    </section>
+        <div>
+          <h2> Freelance Full-Stack Developer | Android & Web Specialist</h2><br>
 
+          <p>
+            I design and build <strong>end-to-end digital solutions</strong> that seamlessly connect mobile
+            apps,
+            web platforms, and scalable back-end systems. With a strong foundation in
+            <strong>Kotlin + Jetpack Compose</strong> for Android and modern web frameworks, I create
+            products
+            that are <em>fast, secure, and user-friendly</em>.
+          </p>
 
-    <section class="section" id="skills" style="background-color: var(--bg-paper);">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <p class="section-subtitle">My skills organized by development domains</p>
+          <p>
+            My approach blends <strong>creative front-end design</strong> with <strong>solid back-end
+              engineering</strong>.
+            From crafting pixel-perfect mobile UIs to developing APIs, managing databases, and deploying
+            cloud-based architectures, I ensure that every layer of your product ecosystem works in harmony.
+          </p>
 
-            <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
-                <!-- Frontend Development -->
-                <div class="skill-category"
-                    style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
-                    <h3
-                        style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
-                        Frontend Development
-                    </h3>
-                    <div class="skills-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Android</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Kotlin</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Jetpack Compose</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            XML</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            React</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            HTML5</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            CSS3</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            JavaScript</div>
-                    </div>
-                </div>
+          <p>
+            I thrive on projects that demand <strong>innovation, scalability, and automation</strong>. With
+            clear communication
+            and an agile mindset, I partner with clients to bring their ideas to life while ensuring
+            <strong>technical excellence</strong> and long-term maintainability.
+          </p>
 
-                <!-- Backend Development -->
-                <div class="skill-category"
-                    style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
-                    <h3
-                        style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
-                        Backend Development
-                    </h3>
-                    <div class="skills-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Node.js</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Express</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            PHP</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Java</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Python</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            JSON / API</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            RESTful APIs</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            OOPs</div>
-                    </div>
-                </div>
+          <blockquote class="quote">
+            "Let’s build not just an app or a website, but a connected ecosystem your users will love."
+          </blockquote>
 
-                <!-- Database & Tools -->
-                <div class="skill-category"
-                    style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
-                    <h3
-                        style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
-                        Database & Tools
-                    </h3>
-                    <div class="skills-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Firebase</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            MySQL</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Room Database</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Docker</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Git</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            GitHub</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            Android Studio</div>
-                        <div class="skill-item"
-                            style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
-                            VS Code</div>
-                    </div>
-                </div>
-            </div>
+          <div class="skills-grid" style="margin-top: 32px;">
+            <div class="skill-item">📱 Android (Kotlin, Jetpack, Compose)</div>
+            <div class="skill-item">🌐 Web (React, Node.js, Express, Tailwind )</div>
+            <div class="skill-item">🗄️ Databases (MySQL, Firebase, Room)</div>
+            <div class="skill-item">⚡ API Integration (REST/JSON)</div>
+            <div class="skill-item">☁️ Cloud & Deployment (Docker, VPS)</div>
+            <div class="skill-item">🛠️ Git / GitHub / CI-CD</div>
+            <div class="skill-item">💡 Problem Solving & OOPs</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="projects-header">
-                <div>
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Android, Web & Automation</p>
-                </div>
-                <a href="https://github.com/jayagarwal-github" class="btn btn-outline" target="_blank">
-                    See all on GitHub <i class="fas fa-arrow-right"></i>
-                </a>
+
+  <section class="section" id="skills" style="background-color: var(--bg-paper);">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-subtitle">My skills organized by development domains</p>
+
+      <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        <!-- Frontend Development -->
+        <div class="skill-category"
+          style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <h3
+            style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
+            Frontend Development
+          </h3>
+          <div class="skills-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Android</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Kotlin</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Jetpack Compose</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              XML</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              React</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              HTML5</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              CSS3</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              JavaScript</div>
+          </div>
+        </div>
+
+        <!-- Backend Development -->
+        <div class="skill-category"
+          style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <h3
+            style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
+            Backend Development
+          </h3>
+          <div class="skills-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Node.js</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Express</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              PHP</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Java</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Python</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              JSON / API</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              RESTful APIs</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              OOPs</div>
+          </div>
+        </div>
+
+        <!-- Database & Tools -->
+        <div class="skill-category"
+          style="flex: 1; min-width: 300px; background: var(--bg-default); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <h3
+            style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--border); text-align: center;">
+            Database & Tools
+          </h3>
+          <div class="skills-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px;">
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Firebase</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              MySQL</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Room Database</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Docker</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Git</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              GitHub</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              Android Studio</div>
+            <div class="skill-item"
+              style="padding: 12px 16px; background-color: var(--bg-paper); border-radius: 8px; text-align: center; font-weight: 500; box-shadow: var(--shadow-sm);">
+              VS Code</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Android, Web & Automation</p>
+        </div>
+        <a href="https://github.com/jayagarwal-github" class="btn btn-outline" target="_blank">
+          See all on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1674&q=80"
+            alt="InvestWise India" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>InvestWise India</span>
+              <span class="project-tech">Android • Kotlin • Firebase</span>
             </div>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1674&q=80"
-                        alt="InvestWise India" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>InvestWise India</span>
-                            <span class="project-tech">Android • Kotlin • Firebase</span>
-                        </div>
-                        <p class="project-description">AI-assisted mutual fund guidance, curated insights, and
-                            comparisons for beginners.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github/InvestWise_India" class="btn btn-primary"
+            <p class="project-description">AI-assisted mutual fund guidance, curated insights, and
+              comparisons for beginners.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github/InvestWise_India" class="btn btn-primary"
                                 target="_blank">
                                 <i class="fab fa-github"></i> Code
                             </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="./assets/whatsapp-automation.png" alt="WhatsApp Automation Bot" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>WhatsApp Automation Bot</span>
-                            <span class="project-tech">Node.js • Baileys • MySQL</span>
-                        </div>
-                        <p class="project-description">Automated WhatsApp bot for scheduling, group management, and
-                            contact workflows.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="./assets/News.jpg" alt="News Application" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>News Application</span>
-                            <span class="project-tech">Android • Kotlin • REST API</span>
-                        </div>
-                        <p class="project-description">Real-time news application fetching articles from APIs with
-                            category filters and search.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <img src="./assets/Ai-Chatbot.jpg" alt="AI Chatbot" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>AI Chatbot</span>
-                            <span class="project-tech">Python • NLP • Firebase</span>
-                        </div>
-                        <p class="project-description">Conversational AI chatbot for answering queries, integrated with
-                            web and Android apps.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <img src="./assets/automation-workflow-clear.png" alt="Automation Workflows" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>Automation Workflows</span>
-                            <span class="project-tech">Node.js • Cron • APIs</span>
-                        </div>
-                        <p class="project-description">Custom workflow automation solutions for data processing, alerts,
-                            and scheduling tasks.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1674&q=80"
-                        alt="Android & Web Applications" class="project-image">
-                    <div class="project-content">
-                        <div class="project-title">
-                            <span>Android & Web Applications</span>
-                            <span class="project-tech">Kotlin • React • MySQL</span>
-                        </div>
-                        <p class="project-description">Portfolio of Android and Web apps, combining modern UI design
-                            with scalable back-ends.</p>
-                        <div class="project-actions">
-                            <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
             </div>
+          </div>
         </div>
-    </section>
 
-
-    <section class="section" id="experience" style="background-color: var(--bg-paper);">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-
-            <div class="experience-list">
-                <!-- Experience 1 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-role">Freelancer — Android & Web Development</h3>
-                        <div class="experience-period">2025 — Present</div>
-                    </div>
-                    <p>Worked with clients on building custom Android and Web solutions. Delivered apps with Firebase
-                        authentication, API integrations, automation workflows, and responsive UIs.</p>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3 class="experience-role">Software Developer (SDE) — Costoso Italiano</h3>
-                        <div class="experience-period">2025 — Present</div>
-                    </div>
-                    <p>Contributed to Android & Web application development for business operations. Focused on scalable
-                        backend solutions, automation systems, and seamless user experiences using Kotlin, React, MySQL,
-                        and cloud services.</p>
-                </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="./assets/whatsapp-automation.png" alt="WhatsApp Automation Bot" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>WhatsApp Automation Bot</span>
+              <span class="project-tech">Node.js • Baileys • MySQL</span>
             </div>
+            <p class="project-description">Automated WhatsApp bot for scheduling, group management, and
+              contact workflows.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="./assets/News.jpg" alt="News Application" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>News Application</span>
+              <span class="project-tech">Android • Kotlin • REST API</span>
+            </div>
+            <p class="project-description">Real-time news application fetching articles from APIs with
+              category filters and search.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <img src="./assets/Ai-Chatbot.jpg" alt="AI Chatbot" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>AI Chatbot</span>
+              <span class="project-tech">Python • NLP • Firebase</span>
+            </div>
+            <p class="project-description">Conversational AI chatbot for answering queries, integrated with
+              web and Android apps.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <img src="./assets/automation-workflow-clear.png" alt="Automation Workflows" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>Automation Workflows</span>
+              <span class="project-tech">Node.js • Cron • APIs</span>
+            </div>
+            <p class="project-description">Custom workflow automation solutions for data processing, alerts,
+              and scheduling tasks.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1674&q=80"
+            alt="Android & Web Applications" class="project-image">
+          <div class="project-content">
+            <div class="project-title">
+              <span>Android & Web Applications</span>
+              <span class="project-tech">Kotlin • React • MySQL</span>
+            </div>
+            <p class="project-description">Portfolio of Android and Web apps, combining modern UI design
+              with scalable back-ends.</p>
+            <div class="project-actions">
+              <!-- <a href="https://github.com/jayagarwal-github" class="btn btn-primary" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div>
-                    <h2 class="section-title">Get in touch</h2>
-                    <p class="section-subtitle">Open to roles and collaborations</p>
+  <section class="section" id="experience" style="background-color: var(--bg-paper);">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
 
-                    <div class="social-links">
-                        <a href="https://github.com/jayagarwal-github" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/jayagarwal634" class="social-link" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
+      <div class="experience-list">
+        <!-- Experience 1 -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3 class="experience-role">Freelancer — Android & Web Development</h3>
+            <div class="experience-period">2025 — Present</div>
+          </div>
+          <p>Worked with clients on building custom Android and Web solutions. Delivered apps with Firebase
+            authentication, API integrations, automation workflows, and responsive UIs.</p>
+        </div>
 
-                <div class="contact-form">
-                    <form id="queryForm" action="https://formspree.io/f/xqaeobow" method="POST">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label class="form-label">Name</label>
-                                <input type="text" class="form-input" name="name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-input" name="email" placeholder="Your email" required>
-                            </div>
-                            <div class="form-group full">
-                                <label class="form-label">Message</label>
-                                <textarea class="form-input" name="message" placeholder="Your message"
-                                    required></textarea>
-                            </div>
-                        </div>
+        <!-- Experience 2 -->
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3 class="experience-role">Software Developer (SDE) — Costoso Italiano</h3>
+            <div class="experience-period">2025 — Present</div>
+          </div>
+          <p>Contributed to Android & Web application development for business operations. Focused on scalable
+            backend solutions, automation systems, and seamless user experiences using Kotlin, React, MySQL,
+            and cloud services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                        <div class="hero-actions">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                            <!-- <a href="#" class="btn btn-outline">
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-title">Get in touch</h2>
+          <p class="section-subtitle">Open to roles and collaborations</p>
+
+          <div class="social-links">
+            <a href="https://github.com/jayagarwal-github" class="social-link" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jayagarwal634" class="social-link" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="queryForm" action="https://formspree.io/f/xqaeobow" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-input" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" name="email" placeholder="Your email" required>
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Message</label>
+                <textarea class="form-input" name="message" placeholder="Your message" required></textarea>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <!-- <a href="#" class="btn btn-outline">
                                 <i class="fas fa-download"></i> Resume
                             </a> -->
-                        </div>
-                    </form>
-                </div>
-
             </div>
+          </form>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>© 2025 Jay Agarwal. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://github.com/jayagarwal-github" class="social-icon" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jayagarwal634" class="social-icon" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2025 Jay Agarwal. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://github.com/jayagarwal-github" class="social-icon" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jayagarwal634" class="social-icon" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".section-title", { opacity: 0, y: 40, duration: 1 });
+  <script>
+    //remove the hash
+    window.addEventListener("hashchange", function () {
+      history.replaceState("", document.title, window.location.pathname + window.location.search);
+    });
 
-        document.addEventListener("DOMContentLoaded", () => {
-            // Animate the hero content (left side)
-            gsap.from(".hero-content", {
-                opacity: 0,
-                x: -80,
-                duration: 1.2,
-                ease: "power3.out"
-            });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".section-title", { opacity: 0, y: 40, duration: 1 });
 
-            // Animate the hero image (right side)
-            gsap.from(".hero-image", {
-                opacity: 0,
-                x: 80,
-                duration: 1.2,
-                delay: 0.3,
-                ease: "power3.out"
-            });
+    document.addEventListener("DOMContentLoaded", () => {
+      // Animate the hero content (left side)
+      gsap.from(".hero-content", {
+        opacity: 0,
+        x: -80,
+        duration: 1.2,
+        ease: "power3.out"
+      });
 
-            // Animate hero title & subtitle staggered
-            gsap.from(".hero-title, .hero-subtitle, .hero-description, .hero-actions, .tech-stack", {
-                opacity: 0,
-                y: 30,
-                duration: 0.8,
-                delay: 0.6,
-                ease: "power2.out",
-                stagger: 0.2
-            });
-        });
+      // Animate the hero image (right side)
+      gsap.from(".hero-image", {
+        opacity: 0,
+        x: 80,
+        duration: 1.2,
+        delay: 0.3,
+        ease: "power3.out"
+      });
 
-    
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
+      // Animate hero title & subtitle staggered
+      gsap.from(".hero-title, .hero-subtitle, .hero-description, .hero-actions, .tech-stack", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        delay: 0.6,
+        ease: "power2.out",
+        stagger: 0.2
+      });
+    });
 
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        });
 
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      if (navMenu.classList.contains('open')) {
+        mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
+      });
+    }, { threshold: 0.1 });
 
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
+    fadeElements.forEach(el => {
+      observer.observe(el);
+    });
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            if (navMenu.classList.contains('open')) {
-                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
-            } else {
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
+    // Stagger animation for skills
+    const staggerItems = document.querySelectorAll('.stagger-item');
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.1 });
 
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
+    staggerItems.forEach(el => {
+      staggerObserver.observe(el);
+    });
 
-        // Scroll animations
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        fadeElements.forEach(el => {
-            observer.observe(el);
-        });
-
-        // Stagger animation for skills
-        const staggerItems = document.querySelectorAll('.stagger-item');
-        const staggerObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        staggerItems.forEach(el => {
-            staggerObserver.observe(el);
-        });
-
-        // Apply tilt effect to all project cards
-        document.addEventListener("DOMContentLoaded", () => {
-            VanillaTilt.init(document.querySelectorAll(".project-card"), {
-                max: 15,
-                speed: 400,
-                glare: true,
-                "max-glare": 0.3
-            });
-        });
+    // Apply tilt effect to all project cards
+    document.addEventListener("DOMContentLoaded", () => {
+      VanillaTilt.init(document.querySelectorAll(".project-card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.3
+      });
+    });
 
 
-    </script>
+  </script>
 </body>
 
 </html>
