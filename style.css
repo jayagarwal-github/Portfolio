@@ -575,6 +575,9 @@
      .hero-content {
          align-items: center;
      }
+     .hero-image{
+        display: none;
+     }
 
      .tech-stack {
          justify-content: center;
@@ -622,6 +625,9 @@
      .hero-actions {
          flex-direction: column;
          width: 100%;
+     }
+     .hero-image{
+        display: none;
      }
 
      .btn {
