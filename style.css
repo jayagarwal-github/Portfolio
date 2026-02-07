@@ -730,6 +730,64 @@
          text-align: center;
      }
  }
+ .contact-info {
+  margin-bottom: 2.5rem;
+}
+
+.phone-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.0rem;
+  background-color: var(--primary-color, #2563eb); /* Your primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+  border: 2px solid transparent;
+}
+
+.phone-button:hover {
+  background-color: var(--primary-dark, #1d4ed8); /* Darker shade for hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+.phone-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.phone-button i {
+  font-size: 1.2rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Optional: Add pulse animation for attention */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+/* Add this class if you want a subtle pulse effect */
+.phone-button.pulse {
+  animation: pulse 2s infinite;
+}
 
  /* Dark mode toggle */
  .dark-mode-toggle {
